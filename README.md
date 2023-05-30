@@ -18,3 +18,6 @@ Create a Cloudlog instance on a Docker container
 
 ## Full setup guide
 Full setup can be found at [IU2FRL Website](https://www.iu2frl.it/cloudlog-su-docker-container/)
+
+## Public image
+Image can be accessed on the hub at [iu2frl/cloudlog](https://hub.docker.com/repository/docker/iu2frl/cloudlog/general)
