@@ -1,4 +1,8 @@
-# CloudlogDocker
+# Deprecated
+
+This repository is no longer relevant other than fore some personal testing, by cooperating with the Cloudlog creators, this is now included in the official release [magicbug/Cloudlog](https://github.com/magicbug/Cloudlog)
+
+## CloudlogDocker
 Create a Cloudlog instance on a Docker container
 
 ## Requirements
