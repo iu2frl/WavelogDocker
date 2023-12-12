@@ -11,7 +11,7 @@ RUN apt-get update \
 && apt-get install -y git curl libxml2-dev libonig-dev
 RUN docker-php-ext-install mysqli mbstring xml
 # Copy proper file to target image
-RUN cd /var/www/html && rm -rf ./
+RUN cd /var/www/html && rm -rf *
 WORKDIR /var/www/html
 RUN git clone https://github.com/magicbug/Cloudlog.git
 RUN mv ./Cloudlog/* ./ && rm -rf ./Cloudlog
