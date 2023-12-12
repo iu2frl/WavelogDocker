@@ -10,11 +10,11 @@ RUN touch /usr/local/etc/php/conf.d/uploads.ini \
 RUN apt-get update \
 && apt-get install -y git curl libxml2-dev libonig-dev
 RUN docker-php-ext-install mysqli mbstring xml
-# Cleanup
-RUN rm -rf /var/www/html/docker/
 # Copy proper file to target image
-COPY ./ /var/www/html/
+RUN cd /var/www/html && rm -rf ./
 WORKDIR /var/www/html
+RUN git clone https://github.com/magicbug/Cloudlog.git
+RUN mv ./Cloudlog/* ./ && rm -rf ./Cloudlog
 # Setting permissions as: https://github.com/magicbug/Cloudlog/wiki/Installation
 RUN cd /var/www/html \
 && chown -R root:www-data /var/www/html
