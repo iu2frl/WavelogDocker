@@ -22,6 +22,11 @@ Create a Cloudlog instance on a Docker container
 ### Execute the image
 - run `docker-compose up --build -d cloudlog`
 
+### Executing full cloudlog stack
+- Clone this repo
+- cd to cloned folder
+- run `sudo docker compose up -d`
+
 ## Full setup guide
 Full setup can be found at [IU2FRL Website](https://www.iu2frl.it/cloudlog-su-docker-container/)
 
