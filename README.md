@@ -1,5 +1,3 @@
-# Deprecated
-
 ~~This repository is no longer relevant other than fore some personal testing, by cooperating with the Cloudlog creators, this is now included in the official release [magicbug/Cloudlog](https://github.com/magicbug/Cloudlog)~~
 
 Unarchiving the repository as the original creator removed the Docker support
