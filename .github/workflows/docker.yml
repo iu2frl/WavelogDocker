@@ -33,4 +33,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm/v7,linux/arm64/v8,linux/arm64
           push: true
-          tags: iu2frl/openwebrx-rb-full:${{ steps.get-latest-tag.outputs.tag }},iu2frl/openwebrx-rb-full:latest
+          tags: iu2frl/cloudlog:${{ steps.get-latest-tag.outputs.tag }},iu2frl/cloudlog:latest
