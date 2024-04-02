@@ -2,22 +2,20 @@ version: '3'
 services:
   db:
     image: mysql:5.7
-    container_name: cloudlog-mysql
+    container_name: wavelog-mysql
     environment:
       MYSQL_ROOT_PASSWORD: password-segreta
-      MYSQL_USER: cloudlog-user
-      MYSQL_PASS: cloudlog-pass
     #ports:
     #  - "3306:3306"
     networks:
-      - cloudlog-net
+      - wavelog-net
     volumes:
       - dbdata:/var/lib/mysql
     restart: unless-stopped
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: cloudlog-phpmyadmin
+    container_name: wavelog-phpmyadmin
     depends_on:
       - db
     environment:
@@ -28,28 +26,28 @@ services:
       PMA_PASSWORD: password-segreta
     restart: unless-stopped
     ports:
-      - "4083:80"
+      - "4081:80"
     networks:
-      - cloudlog-net
+      - wavelog-net
 
-  cloudlog:
+  wavelog:
     image: iu2frl/wavelog:latest
-    container_name: cloudlog-main
+    container_name: wavelog-main
     volumes:
-      - cloudlog-config:/var/www/html/application/config
-      - cloudlog-backup:/var/www/html/application/backup
-      - cloudlog-uploads:/var/www/html/application/uploads
+      - config:/var/www/html/application/config
+      - backup:/var/www/html/application/backup
+      - uploads:/var/www/html/application/uploads
     ports:
-      - "4086:80"
+      - "4080:80"
     networks:
-      - cloudlog-net
+      - wavelog-net
     restart: unless-stopped
 
 volumes:
   dbdata:
-  cloudlog-config:
-  cloudlog-backup:
-  cloudlog-uploads:
+  config:
+  backup:
+  uploads:
 
 networks:
-  cloudlog-net:
+  wavelog-net:

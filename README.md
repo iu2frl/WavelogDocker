@@ -32,6 +32,20 @@ Create a Wavelog instance on a Docker container
 
 Coming soon
 
+- Copy the stack on your server machine
+- Set the same root password to both MySQL and PhpMyAdmin in the `docker-compose.yml`
+- Execute the stack with `docker compose up -d`
+- Navigate to http://ipaddress:4081 and create a database for Wavelog
+  - Select the newly created databse and in the `Privileges` tab, create a new user to be used by Wavelog
+  - Make sure to grant all the privileges to the Database to the new user
+- Navigate to http://ipaddress:4080 to access the Wavelog setup
+  - Proceed by entering your user details and info
+  - When you get to the DB setup enter:
+    - Hostname: `wavelog-mysql`
+    - Database name: the one you configured at the previous step
+    - User and password: the one you created before
+- Complete the configuration
+
 ## Public image
 
 Image can be accessed on the hub at [iu2frl/wavelog](https://hub.docker.com/repository/docker/iu2frl/wavelog/general)
