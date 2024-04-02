@@ -1,9 +1,8 @@
-~~This repository is no longer relevant other than fore some personal testing, by cooperating with the Cloudlog creators, this is now included in the official release [magicbug/Cloudlog](https://github.com/magicbug/Cloudlog)~~
+# WavelogDocker
 
-Unarchiving the repository as the original creator removed the Docker support
+Create a Wavelog instance on a Docker container
 
-## CloudlogDocker
-Create a Cloudlog instance on a Docker container
+## Experimental
 
 ## Requirements
 - MySQL engine up and running
@@ -15,10 +14,10 @@ Create a Cloudlog instance on a Docker container
 ### Building the image
 - Clone this repo
 - cd to cloned folder
-- run `sudo docker build -t cloudlog:latest .`
+- run `sudo docker build -t wavelog:latest .`
 
 ### Execute the image
-- run `docker-compose up --build -d cloudlog`
+- run `docker-compose up --build -d wavelog`
 
 ### Executing full cloudlog stack
 - Clone this repo
@@ -26,7 +25,8 @@ Create a Cloudlog instance on a Docker container
 - run `sudo docker compose up -d`
 
 ## Full setup guide
-Full setup can be found at [IU2FRL Website](https://www.iu2frl.it/cloudlog-su-docker-container/)
+
+Coming soon
 
 ## Public image
-Image can be accessed on the hub at [iu2frl/cloudlog](https://hub.docker.com/repository/docker/iu2frl/cloudlog/general)
+Image can be accessed on the hub at [iu2frl/wavelog](https://hub.docker.com/repository/docker/iu2frl/wavelog/general)

@@ -9,13 +9,13 @@ RUN touch /usr/local/etc/php/conf.d/uploads.ini \
 # Adding required libraries and modules
 RUN apt-get update \
 && apt-get install -y git curl libxml2-dev libonig-dev
-RUN docker-php-ext-install mysqli mbstring xml
+RUN docker-php-ext-install mysqli mbstring xml zip
 # Copy proper file to target image
 RUN cd /var/www/html && rm -rf *
 WORKDIR /var/www/html
-RUN git clone https://github.com/magicbug/Cloudlog.git
-RUN mv ./Cloudlog/* ./ && rm -rf ./Cloudlog
-# Setting permissions as: https://github.com/magicbug/Cloudlog/wiki/Installation
+RUN git clone https://github.com/wavelog/Wavelog.git
+RUN mv ./Wavelog/* ./ && rm -rf ./Wavelog
+# Setting permissions as: https://github.com/wavelog/Wavelog/wiki/Installation
 RUN cd /var/www/html \
 && chown -R root:www-data /var/www/html
 RUN chmod -R g+rw ./application/config/ \
