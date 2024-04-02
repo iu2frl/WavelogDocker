@@ -8,7 +8,7 @@ RUN touch /usr/local/etc/php/conf.d/uploads.ini \
 && echo "max_execution_time = 60" >> /usr/local/etc/php/conf.d/uploads.ini
 # Adding required libraries and modules
 RUN apt-get update \
-&& apt-get install -y git curl libxml2-dev libonig-dev
+&& apt-get install -y git curl libxml2-dev libonig-dev libzip-dev
 RUN docker-php-ext-install mysqli mbstring xml zip
 # Copy proper file to target image
 RUN cd /var/www/html && rm -rf *
